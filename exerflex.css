@@ -1,0 +1,277 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.logo img {
+    width: 160px;
+}
+/* Navbar base styles */
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #F6F6F6;
+  padding: 10px 20px;
+  position: relative; /* for absolute menu */
+}
+
+nav .logo img {
+  width: 160px;
+}
+
+nav ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #000;
+  font-weight: 500;
+}
+
+.hamburger {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+/* Hide the checkbox */
+#menu-toggle:checked ~ .nav-menu {
+    display: flex;
+}
+#menu-toggle {
+    display: none;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+    cursor: pointer;
+    font-size: 28px;
+  }
+
+  nav .nav-menu {
+    display: none; 
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 200px;
+    background: #F6F6F6;
+    padding: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    z-index: 999;
+  }
+
+  /* Pure CSS toggle */
+  #menu-toggle:checked ~ .nav-menu {
+    display: flex;
+    
+  }
+}
+
+.first {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 38px;
+    margin-top: 50px;
+}
+
+span.download {
+    font-size: 48px;
+    font-weight: 600;
+    font-family: system-ui;
+}
+
+img {
+    width: 50px;
+    margin: -10px 10px;
+}
+
+.down-p {
+    font-size: 18px;
+    text-align: center;
+    width: 40vw;
+    color: grey;
+    font-family: sans-serif;
+    font-weight: 300;
+}
+
+.btn-down {
+    background-color: #ffd741;
+    padding: 15px 10px;
+    font-size: small;
+    color: #2e2e2e;
+    border: none;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.btn-down i {
+    margin-right: 8px;
+    margin-left: 8px;
+}
+
+.second span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    /* keep items closer */
+    font-family: system-ui;
+    margin: 30px;
+    color: grey;
+    font-weight: 100;
+    font-size: 30px;
+}
+
+/* style the version text */
+.second>span>span:nth-child(3) {
+    font-size: 22px;
+    color: #555;
+    margin-left: 2px;
+    /* bring it closer to 'Download UltraEdit' */
+}
+
+ .box-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    max-width: 900px;
+    margin: 10px 20px;
+  }
+
+  /* Each download box */
+  .box {
+    background-color: #f4f1eb;
+    border-radius: 12px;
+    padding: 25px 20px;
+    box-sizing: border-box;
+    box-shadow: 0 0 8px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  /* Headings */
+  .box h3 {
+    margin: 0 0 5px 0;
+    font-weight: 700;
+  }
+  .box h4 {
+    margin: 0 0 15px 0;
+    font-weight: 600;
+  }
+  .box h6 {
+    margin: 15px 0 5px 0;
+    font-weight: 600;
+    font-size: 0.85rem;
+  }
+
+  /* Download button */
+  .box button {
+    background-color: #f9cd26;
+    border: none;
+    padding: 10px 24px;
+    border-radius: 6px;
+    color: #000;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 5px;
+    transition: background-color 0.3s ease;
+  }
+  .box button:hover {
+    background-color: #e0b520;
+  }
+
+  /* SHA256 hash wrapping */
+  .sha256 {
+    margin: 0;
+    font-size: 0.75rem;
+    color: #555;
+    word-break: break-all;
+  }
+@media (max-width: 600px) {
+  /* Stack the logo + title vertically */
+  .second span {
+    flex-direction: column;
+    font-size: 24px;
+    margin: 15px 10px;
+    gap: 8px; /* add some vertical spacing */
+    text-align: center;
+  }
+  
+span.download {
+    flex-direction: column;
+   font-size: 24px;
+    margin: 15px 10px;
+    gap: 8px; /* add some vertical spacing */
+    text-align: center;
+}
+img {
+    width: 30px;
+    margin: -10px 10px;
+}
+
+  /* Make the version text a bit smaller and remove left margin */
+  .second > span > span:nth-child(3) {
+    font-size: 18px;
+    margin-left: 0;
+  }
+
+  /* Stack boxes to single column */
+  .box-container {
+    grid-template-columns: 1fr;
+    max-width: 100%;
+    margin: 10px;
+    padding: 0 10px;
+  }
+
+  /* Make download description wider */
+  .down-p {
+    width: 90vw;
+    font-size: 16px;
+  }
+
+  /* Adjust first section gap */
+  .first {
+    gap: 20px;
+    margin-top: 30px;
+  }
+
+  /* Buttons full width and nicely padded */
+  .box button {
+    width: 100%;
+    padding: 12px 0;
+    font-size: 1rem;
+  }
+
+  /* Reduce padding in boxes */
+  .box {
+    padding: 20px 15px;
+  }
+
+  /* Adjust nav for smaller widths */
+  nav {
+    flex-wrap: wrap;
+    height: auto;
+    padding: 10px 20px;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  /* Stack nav menu vertically if needed */
+  .right ul {
+    flex-direction: column;
+    gap: 12px;
+  }
+}
