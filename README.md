@@ -1,6 +1,7 @@
 # UltraEdit Website
 
-![Website Screenshot](<img width="415" height="464" alt="image" src="https://github.com/user-attachments/assets/6961abba-a87c-4860-a85f-1a2bf703a8ff" />
+![Website Screenshot]<img width="597" height="438" alt="image" src="https://github.com/user-attachments/assets/b068bfea-7329-4d9e-bb5b-919d559ba838" />
+
 )  
 *A preview of the UltraEdit download page.*
 
